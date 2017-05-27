@@ -30,7 +30,7 @@ $env = $app->detectEnvironment(array(
 
 ));
 
-if ($unitTesting) {
+if (isset($unitTesting) && $unitTesting === true) {
 	$env = $testEnvironment;
 }
 
@@ -47,7 +47,7 @@ if ($unitTesting) {
 
 $app->bindInstallPaths(require __DIR__.'/paths.php');
 
-if ($unitTesting) {
+if ($env === 'testing') {
 	$app['path.storage'] = $testingStoragePath;
 }
 
