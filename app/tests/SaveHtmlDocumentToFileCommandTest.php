@@ -1,6 +1,6 @@
 <?php
 
-class SaveHtmlToFileCommandTest extends TestCase {
+class SaveHtmlDocumentToFileCommandTest extends TestCase {
 
 	/**
 	 * Test file is created with proper content
