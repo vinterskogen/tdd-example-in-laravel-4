@@ -39,8 +39,8 @@ class SaveHtmlToFileCommand extends Command {
 	{
 		$name = $this->argument('name');
 		$content = $this->argument('content');
-		$storagePath = storage_path();
 
+		$storagePath = storage_path();
 		$pathToFile = "$storagePath/app/htmlDocuments/$name.html";
 
 		File::put($pathToFile, $content);

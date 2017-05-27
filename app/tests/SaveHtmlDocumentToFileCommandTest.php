@@ -19,7 +19,7 @@ class SaveHtmlDocumentToFileCommandTest extends TestCase {
 			]
 		);
 
-		$storagePath = app()['path.storage'];
+		$storagePath = storage_path();
 		$pathToExpectedFile = "$storagePath/app/htmlDocuments/$name.html";
 
 		$this->assertFileExists($pathToExpectedFile);
